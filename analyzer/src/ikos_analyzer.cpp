@@ -214,7 +214,10 @@ static llvm::cl::list< analyzer::CheckerName > Analyses(
                    checker_long_name(analyzer::CheckerName::Debug)),
         clEnumValN(analyzer::CheckerName::MemoryWatch,
                    checker_short_name(analyzer::CheckerName::MemoryWatch),
-                   checker_long_name(analyzer::CheckerName::MemoryWatch))),
+                   checker_long_name(analyzer::CheckerName::MemoryWatch)),
+        clEnumValN(analyzer::CheckerName::MyDivZero,
+                   checker_short_name(analyzer::CheckerName::MyDivZero),
+                   checker_long_name(analyzer::CheckerName::MyDivZero))),
     llvm::cl::cat(AnalysisCategory));
 
 static llvm::cl::opt< analyzer::MachineIntDomainOption > Domain(

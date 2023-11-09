@@ -59,6 +59,7 @@
 #include <ikos/analyzer/checker/soundness.hpp>
 #include <ikos/analyzer/checker/uninitialized_variable.hpp>
 #include <ikos/analyzer/checker/unsigned_int_overflow.hpp>
+#include <ikos/analyzer/checker/my_div_zero.hpp>
 #include <ikos/analyzer/util/color.hpp>
 #include <ikos/analyzer/util/source_location.hpp>
 
@@ -131,6 +132,8 @@ std::unique_ptr< Checker > make_checker(Context& ctx, CheckerName name) {
       return std::make_unique< DebugChecker >(ctx);
     case CheckerName::MemoryWatch:
       return std::make_unique< MemoryWatchChecker >(ctx);
+    case CheckerName::MyDivZero:
+      return std::make_unique< MyDivZero >(ctx);
     default:
       ikos_unreachable("unreachable");
   }

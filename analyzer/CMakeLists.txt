@@ -257,6 +257,7 @@ add_executable(ikos-analyzer
   src/checker/soundness.cpp
   src/checker/uninitialized_variable.cpp
   src/checker/unsigned_int_overflow.cpp
+  src/checker/my_div_zero.cpp
   src/database/output.cpp
   src/database/sqlite.cpp
   src/database/table.cpp

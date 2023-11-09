@@ -178,6 +178,7 @@ analyses = (
     ('dfa', 'Double Free Analysis'),
     ('dbg', 'Debugger'),
     ('watch', 'Memory Watcher'),
+    ('zzzzzzdbz', '[[TEST]] Divide by zero checker'),
 )
 
 default_analyses = (
